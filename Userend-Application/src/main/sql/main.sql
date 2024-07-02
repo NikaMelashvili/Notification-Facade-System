@@ -19,3 +19,11 @@ create table user (
     password varchar(255),
     role varchar(255)
 );
+
+create table preferences (
+    preference_id bigint primary key auto_increment,
+    notification_type varchar(255),
+    opted_in bool,
+    customer_id bigint,
+    foreign key preferences(customer_id) references customers (customer_id)
+)

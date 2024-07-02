@@ -1,8 +1,8 @@
-package com.melashvili.userend.model.mapper;
+package com.melashvili.customerservice.model.mapper;
 
-import com.melashvili.userend.model.dto.request.CustomerRequest;
-import com.melashvili.userend.model.dto.response.CustomerResponse;
-import com.melashvili.userend.model.entitites.Customer;
+import com.melashvili.customerservice.model.dto.request.CustomerRequest;
+import com.melashvili.customerservice.model.dto.response.CustomerResponse;
+import com.melashvili.customerservice.model.entities.Customer;
 
 public class CustomerMapper {
     public static Customer toCustomer(CustomerRequest request) {

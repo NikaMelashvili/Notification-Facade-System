@@ -1,11 +1,11 @@
-package com.melashvili.userend.service;
+package com.melashvili.userend.services;
 
 import com.melashvili.userend.model.base.Role;
 import com.melashvili.userend.model.dto.request.AuthenticationRequest;
 import com.melashvili.userend.model.dto.request.RegisterRequest;
 import com.melashvili.userend.model.dto.response.AuthenticationResponse;
 import com.melashvili.userend.model.entitites.User;
-import com.melashvili.userend.repository.UserRepository;
+import com.melashvili.userend.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

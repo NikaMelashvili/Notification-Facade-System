@@ -1,4 +1,4 @@
-package com.melashvili.userend.service;
+package com.melashvili.userend.services;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

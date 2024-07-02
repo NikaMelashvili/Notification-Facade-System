@@ -1,14 +1,13 @@
-package com.melashvili.userend.model.entitites;
+package com.melashvili.customerservice.model.entities;
 
-import com.melashvili.userend.model.base.AppEntity;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.melashvili.customerservice.model.base.AppEntity;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.Set;
 
 @Entity
 @Getter
@@ -35,4 +34,7 @@ public class Customer extends AppEntity {
 
     @Column(name = "address")
     private String address;
+
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<Preference> preferences;
 }

@@ -1,6 +1,6 @@
 package com.melashvili.userend.configuration;
 
-import com.melashvili.userend.repository.UserRepository;
+import com.melashvili.userend.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

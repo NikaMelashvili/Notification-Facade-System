@@ -1,4 +1,4 @@
-package com.melashvili.userend.model.dto.request;
+package com.melashvili.customerservice.model.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -3,7 +3,7 @@ package com.melashvili.userend.controller;
 import com.melashvili.userend.model.dto.request.AuthenticationRequest;
 import com.melashvili.userend.model.dto.request.RegisterRequest;
 import com.melashvili.userend.model.dto.response.AuthenticationResponse;
-import com.melashvili.userend.service.AuthenticationService;
+import com.melashvili.userend.services.AuthenticationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

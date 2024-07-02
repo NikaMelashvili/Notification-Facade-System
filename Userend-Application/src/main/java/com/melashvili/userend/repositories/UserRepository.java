@@ -1,4 +1,4 @@
-package com.melashvili.userend.repository;
+package com.melashvili.userend.repositories;
 
 import com.melashvili.userend.model.entitites.User;
 import org.springframework.data.repository.CrudRepository;

@@ -1,6 +1,6 @@
-package com.melashvili.userend.repository;
+package com.melashvili.customerservice.repositories;
 
-import com.melashvili.userend.model.entitites.Customer;
+import com.melashvili.customerservice.model.entities.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

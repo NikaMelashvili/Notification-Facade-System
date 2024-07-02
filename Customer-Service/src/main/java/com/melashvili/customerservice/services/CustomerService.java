@@ -1,9 +1,9 @@
-package com.melashvili.userend.service;
+package com.melashvili.customerservice.services;
 
-import com.melashvili.userend.model.dto.request.CustomerRequest;
-import com.melashvili.userend.model.entitites.Customer;
-import com.melashvili.userend.model.mapper.CustomerMapper;
-import com.melashvili.userend.repository.CustomerRepository;
+import com.melashvili.customerservice.model.dto.request.CustomerRequest;
+import com.melashvili.customerservice.model.entities.Customer;
+import com.melashvili.customerservice.model.mapper.CustomerMapper;
+import com.melashvili.customerservice.repositories.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

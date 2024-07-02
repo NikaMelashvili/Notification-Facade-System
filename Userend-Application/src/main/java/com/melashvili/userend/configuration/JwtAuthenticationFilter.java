@@ -1,6 +1,6 @@
 package com.melashvili.userend.configuration;
 
-import com.melashvili.userend.service.JwtService;
+import com.melashvili.userend.services.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

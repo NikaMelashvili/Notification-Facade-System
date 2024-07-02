@@ -1,4 +1,4 @@
-package com.melashvili.userend.model.dto.response;
+package com.melashvili.customerservice.model.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

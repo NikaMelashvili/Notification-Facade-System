@@ -29,6 +29,9 @@ public class User extends AppEntity implements UserDetails {
     @Column(name = "last_name")
     private String lastName;
 
+    @Column(name = "phone_number")
+    private Integer phoneNumber;
+
     @Column(name = "email")
     private String email;
 

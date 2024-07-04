@@ -1,4 +1,4 @@
-package com.melashvili.customerservice.model.base;
+package com.melashvili.userend.model.base;
 
 public enum NotificationType {
     SMS,

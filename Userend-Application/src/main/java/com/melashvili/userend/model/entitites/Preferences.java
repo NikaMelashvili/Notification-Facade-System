@@ -1,8 +1,6 @@
 package com.melashvili.userend.model.entitites;
 
 import com.melashvili.userend.model.base.AppEntity;
-import com.melashvili.userend.model.base.NotificationType;
-import com.melashvili.userend.model.base.PreferenceStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,14 +20,16 @@ public class Preferences extends AppEntity {
     @Column(name = "preference_id")
     private Long preferenceId;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE,
+            CascadeType.REFRESH, CascadeType.DETACH})
     private User customerId;
 
-    @Column(name = "notification_type")
-    @Enumerated(EnumType.STRING)
-    private NotificationType notificationType;
+    @Column(name = "opted_email")
+    private Boolean emailOpt;
 
-    @Column(name = "preference_status")
-    @Enumerated(EnumType.STRING)
-    private PreferenceStatus status;
+    @Column(name = "opted_sms")
+    private Boolean mobileOpt;
+
+    @Column(name = "opted_promo_messages")
+    private Boolean promoOpt;
 }

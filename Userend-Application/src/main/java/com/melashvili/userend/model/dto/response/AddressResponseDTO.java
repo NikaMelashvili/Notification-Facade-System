@@ -1,15 +1,14 @@
 package com.melashvili.userend.model.dto.response;
 
-import com.melashvili.userend.model.base.Role;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class UserResponse {
+public class AddressResponseDTO {
     private Long id;
-    private String firstName;
-    private String lastName;
     private String email;
-    private Role role;
+    private String street;
+    private Integer number;
+    private Integer postalCode;
 }

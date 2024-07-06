@@ -6,9 +6,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class AddCustomerDTO {
-    private String firstName;
-    private String lastName;
-    private Integer phone;
-    private String email;
-    private String password;
+    private UserRegisterDTO user;
+    private AddressRegisterDTO address;
+    private PreferencesRegisterDTO preferences;
 }

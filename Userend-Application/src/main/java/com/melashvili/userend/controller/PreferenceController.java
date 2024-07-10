@@ -1,8 +1,7 @@
 package com.melashvili.userend.controller;
 
-import com.melashvili.userend.model.dto.request.PreferencesRegisterDTO;
+import com.melashvili.userend.model.dto.request.UpdatePreferencesDTO;
 import com.melashvili.userend.model.dto.response.UserPreferencesDTO;
-import com.melashvili.userend.services.AdminService;
 import com.melashvili.userend.services.PreferenceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,14 +14,7 @@ import java.util.List;
 @RequestMapping("/rest/preferences")
 public class PreferenceController {
 
-    private AdminService adminService;
-
     private PreferenceService preferenceService;
-
-    @Autowired
-    public void setAdminService(AdminService adminService) {
-        this.adminService = adminService;
-    }
 
     @Autowired
     public void setPreferenceService(PreferenceService preferenceService) {
@@ -37,12 +29,8 @@ public class PreferenceController {
 
     @PostMapping("/update/{id}")
     public ResponseEntity<Void> updatePreferences(@PathVariable Long id,
-                                                  @RequestBody PreferencesRegisterDTO preferencesRegisterDTO){
-        preferenceService.addPreference(id, preferencesRegisterDTO);
+                                                  @RequestBody UpdatePreferencesDTO updatePreferencesDTO){
+        preferenceService.updatePreferences(id, updatePreferencesDTO);
         return new ResponseEntity<>(HttpStatus.OK);
-    }
-
-    public ResponseEntity<UserPreferencesDTO> displayPreference(@PathVariable Long id){
-        adminService.
     }
 }

@@ -32,5 +32,14 @@ create table addresses (
     foreign key (user_id) references user(user_id)
 );
 
+create table message_logger (
+    log_id bigint primary key auto_increment,
+    recipient varchar(255),
+    subject varchar(255),
+    body varchar(255),
+    success bool,
+    timestamp datetime(6)
+);
+
 alter table user
 add constraint foreign key (address_id) references addresses(address_id);

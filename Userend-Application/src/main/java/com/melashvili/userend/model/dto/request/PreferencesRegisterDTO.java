@@ -6,7 +6,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class PreferencesRegisterDTO {
-    private Boolean email;
-    private Boolean sms;
-    private Boolean promo;
+    private Boolean emailOpt;
+    private Boolean smsOpt;
+    private Boolean promoOpt;
 }

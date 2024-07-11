@@ -11,7 +11,7 @@ public class UserMapper {
         userResponse.setId(user.getId());
         userResponse.setFirstName(user.getFirstName());
         userResponse.setLastName(user.getLastName());
-        userResponse.setPostal(user.getPostal());
+//        userResponse.setPostal(user.getPostal());
         userResponse.setEmail(user.getEmail());
         userResponse.setRole(user.getRole());
 
@@ -23,7 +23,7 @@ public class UserMapper {
 
         user.setFirstName(userResponse.getUser().getFirstName());
         user.setLastName(userResponse.getUser().getLastName());
-        user.setPostal(userResponse.getUser().getPostal());
+//        user.setPostal(userResponse.getUser().getPostal());
         user.setEmail(userResponse.getUser().getEmail());
         user.setPassword(userResponse.getUser().getPassword());
 

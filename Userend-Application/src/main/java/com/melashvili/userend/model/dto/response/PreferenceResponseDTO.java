@@ -7,6 +7,7 @@ import lombok.Setter;
 @Setter
 public class PreferenceResponseDTO {
     private Long id;
-    private String notificationType;
-    private Boolean option;
+    private Boolean emailOpt;
+    private Boolean mobileOpt;
+    private Boolean promoOpt;
 }

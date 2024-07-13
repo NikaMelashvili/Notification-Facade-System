@@ -22,7 +22,7 @@ public class Address extends AppEntity {
     @Column(name = "address_id")
     private Long id;
 
-    @OneToOne(fetch = FetchType.EAGER,
+    @ManyToOne(fetch = FetchType.EAGER,
             cascade = {CascadeType.PERSIST, CascadeType.MERGE,
                     CascadeType.REFRESH, CascadeType.DETACH})
     @JoinColumn(name = "user_id")
@@ -39,8 +39,4 @@ public class Address extends AppEntity {
 
     @Column(name = "postal_address")
     private Integer postalCode;
-
-    @OneToMany(mappedBy = "user")
-    private List<Address> addresses;
-
 }

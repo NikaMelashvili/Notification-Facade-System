@@ -9,6 +9,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -23,8 +24,10 @@ public class User extends AppEntity implements UserDetails {
     @Column(name = "user_id")
     private Long id;
 
-    @OneToOne(fetch = FetchType.EAGER)
-    private Address address;
+    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER,
+            cascade = {CascadeType.PERSIST, CascadeType.MERGE,
+                    CascadeType.REFRESH, CascadeType.DETACH})
+    private Set<Address> addresses;
 
     @Column(name = "first_name")
     private String firstName;

@@ -12,6 +12,11 @@ import com.melashvili.userend.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 @Service
 public class UserService {
 
@@ -41,27 +46,34 @@ public class UserService {
 
         user.setFirstName(customerDTO.getUser().getFirstName());
         user.setLastName(customerDTO.getUser().getLastName());
+        user.setAge(customerDTO.getUser().getAge());
         user.setPassword(customerDTO.getUser().getPassword());
         user.setEmail(customerDTO.getUser().getEmail());
         user.setRole(Role.USER);
 
-        Address address = new Address();
+        userRepository.save(user);
 
+        Address address = new Address();
         address.setUser(user);
         address.setEmail(customerDTO.getAddress().getEmail());
         address.setStreet(customerDTO.getAddress().getStreet());
         address.setNumber(customerDTO.getAddress().getNumber());
         address.setPostalCode(customerDTO.getAddress().getPostalCode());
 
-        Preferences preferences = new Preferences();
+        addressRepository.save(address);
 
+        Preferences preferences = new Preferences();
         preferences.setCustomerId(user);
         preferences.setEmailOpt(customerDTO.getPreferences().getEmailOpt());
         preferences.setMobileOpt(customerDTO.getPreferences().getSmsOpt());
         preferences.setPromoOpt(customerDTO.getPreferences().getPromoOpt());
 
         preferencesRepository.save(preferences);
-        addressRepository.save(address);
+
+        Set<Address> addresses = new HashSet<>();
+        addresses.add(address);
+
+        user.setAddresses(addresses);
         userRepository.save(user);
     }
 
@@ -70,5 +82,9 @@ public class UserService {
         addressRepository.deleteById(id);
         userRepository.deleteById(id);
         return "User by ID " + id + " was deleted";
+    }
+
+    public List<User> findUsersByPhoneNumber(Integer phoneNumber) {
+        return userRepository.findUsersByPhoneNumber(phoneNumber);
     }
 }

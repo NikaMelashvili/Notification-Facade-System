@@ -47,7 +47,7 @@ public class PreferenceService {
                 userResponseDTO.setEmail(user.getEmail());
 
                 preferenceResponseDTO.setEmailOpt(preferences.getEmailOpt());
-                preferenceResponseDTO.setMobileOpt(preferences.getMobileOpt());
+                preferenceResponseDTO.setMobileOpt(preferences.getSmsOpt());
                 preferenceResponseDTO.setPromoOpt(preferences.getPromoOpt());
 
                 userPreferencesDTO.setPreferences(preferenceResponseDTO);
@@ -64,9 +64,21 @@ public class PreferenceService {
 
         assert preferences != null;
         preferences.setEmailOpt(updatePreferencesDTO.getOptEmail());
-        preferences.setMobileOpt(updatePreferencesDTO.getOptSms());
+        preferences.setSmsOpt(updatePreferencesDTO.getOptSms());
         preferences.setPromoOpt(updatePreferencesDTO.getOptPromo());
 
         preferencesRepository.save(preferences);
+    }
+
+    public List<User> getUsersByEmailOpt(Boolean emailOpt) {
+        return userRepository.findUsersByEmailOpt(emailOpt);
+    }
+
+    public List<User> getUsersBySmsOpt(Boolean smsOpt) {
+        return userRepository.findUsersBySmsOpt(smsOpt);
+    }
+
+    public List<User> getUsersByPromoOpt(Boolean promoOpt) {
+        return userRepository.findUsersByPromoOpt(promoOpt);
     }
 }

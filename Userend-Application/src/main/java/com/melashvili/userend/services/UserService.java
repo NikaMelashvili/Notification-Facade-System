@@ -65,7 +65,7 @@ public class UserService {
         Preferences preferences = new Preferences();
         preferences.setCustomerId(user);
         preferences.setEmailOpt(customerDTO.getPreferences().getEmailOpt());
-        preferences.setMobileOpt(customerDTO.getPreferences().getSmsOpt());
+        preferences.setSmsOpt(customerDTO.getPreferences().getSmsOpt());
         preferences.setPromoOpt(customerDTO.getPreferences().getPromoOpt());
 
         preferencesRepository.save(preferences);
@@ -86,5 +86,9 @@ public class UserService {
 
     public List<User> findUsersByPhoneNumber(Integer phoneNumber) {
         return userRepository.findUsersByPhoneNumber(phoneNumber);
+    }
+
+    public List<User> findUsersByFirstName(String firstName) {
+        return userRepository.findUsersByFirstName(firstName);
     }
 }

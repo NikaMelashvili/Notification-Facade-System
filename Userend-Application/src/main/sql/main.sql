@@ -43,3 +43,6 @@ create table message_logger (
 
 alter table user
 add constraint foreign key (address_id) references addresses(address_id);
+
+alter table user
+add constraint foreign key (preference_id) references preferences(preference_id);

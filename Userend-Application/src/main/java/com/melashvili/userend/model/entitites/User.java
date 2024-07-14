@@ -48,6 +48,11 @@ public class User extends AppEntity implements UserDetails {
     @Column(name = "role")
     private Role role;
 
+    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE,
+            CascadeType.REFRESH, CascadeType.DETACH}, fetch = FetchType.EAGER)
+    @JoinColumn(name = "preference_id")
+    private Preferences preferences;
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of();

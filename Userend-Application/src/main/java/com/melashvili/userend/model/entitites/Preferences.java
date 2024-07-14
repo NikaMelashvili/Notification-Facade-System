@@ -20,15 +20,16 @@ public class Preferences extends AppEntity {
     @Column(name = "preference_id")
     private Long preferenceId;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE,
+    @OneToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE,
             CascadeType.REFRESH, CascadeType.DETACH})
+    @JoinColumn(name = "user_id", referencedColumnName = "user_id")
     private User customerId;
 
     @Column(name = "opted_email")
     private Boolean emailOpt;
 
     @Column(name = "opted_sms")
-    private Boolean mobileOpt;
+    private Boolean smsOpt;
 
     @Column(name = "opted_promo_messages")
     private Boolean promoOpt;

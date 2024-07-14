@@ -21,22 +21,22 @@ public class AddressController {
         this.addressService = addressService;
     }
 
-    @PutMapping("/update/address/{id}")
+    @PutMapping("/update/address")
     public ResponseEntity<Void> updateAddress(@RequestBody UpdateAddressInfo updateAddressInfo,
-                                              @PathVariable Long id) {
+                                              @RequestParam Long id) {
         addressService.updateUserAddress(updateAddressInfo, id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @DeleteMapping("/delete/address/{addressId}/{userId}")
-    public ResponseEntity<Void> deleteUserAddress(@PathVariable Long addressId,
-                                                  @PathVariable Long userId) {
+    @DeleteMapping("/delete/address")
+    public ResponseEntity<Void> deleteUserAddress(@RequestParam Long addressId,
+                                                  @RequestParam Long userId) {
         addressService.deleteUserAddressById(addressId, userId);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @GetMapping("/get/user-address/{id}")
-    public ResponseEntity<UserAddressDTO> getUserAddressById(@PathVariable Long id) {
+    @GetMapping("/get/user-address")
+    public ResponseEntity<UserAddressDTO> getUserAddressById(@RequestParam Long id) {
         UserAddressDTO addressDTO = addressService.getUserAddressById(id);
         return new ResponseEntity<>(addressDTO, HttpStatus.OK);
     }

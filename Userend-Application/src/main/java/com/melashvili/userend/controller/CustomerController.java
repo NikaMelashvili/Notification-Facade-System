@@ -33,8 +33,8 @@ public class CustomerController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @DeleteMapping("/delete/{id}")
-    public ResponseEntity<String> deleteUserById(@PathVariable Long id) {
+    @DeleteMapping("/delete")
+    public ResponseEntity<String> deleteUserById(@RequestParam Long id) {
         String response = userService.deleteUserById(id);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }

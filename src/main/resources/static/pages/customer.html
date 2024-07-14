@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/mainStyles.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Add Customer</h1>
+      <p class="prompt">Enter customer account details below.</p>
+      <form action="#" id="addCutomerForm">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="firstName" id="firstName" name="firstName" required />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="lastName" id="lastName" name="lastName" required />
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="age" id="age" name="age" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="street">Street</label>
+          <input type="street" id="street" name="street" required />
+        </div>
+        <div class="form-group">
+          <label for="number">Number</label>
+          <input type="number" id="number" name="number" required />
+        </div>
+        <div class="form-group">
+          <label for="postCode">Post Code</label>
+          <input type="postCode" id="postCode" name="postCode" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div class="form-group" id="checkbox">
+          <label for="emailOpt">Mail</label>
+          <input type="checkbox" id="emailOpt" name="emailOpt" required />
+        </div>
+        <div class="form-group" id="checkbox">
+          <label for="smsOpt">SMS</label>
+          <input type="checkbox" id="smsOpt" name="smsOpt" required />
+        </div>
+        <div class="form-group" id="checkbox">
+          <label for="promoOpt">Promo</label>
+          <input type="checkbox" id="promoOpt" name="promoOpt" required />
+        </div>
+        <input class="add-btn" type="submit" value="Add" />
+      </form>
+    </div>
+    <div class="container">
+      <h1>Update Customer</h1>
+      <p class="prompt">Enter updated customer account details below.</p>
+      <form action="#" id="updateCustomerForm">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="firstName" id="firstName" name="firstName" required />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="lastName" id="lastName" name="lastName" required />
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="age" id="age" name="age" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="street">Street</label>
+          <input type="street" id="street" name="street" required />
+        </div>
+        <div class="form-group">
+          <label for="number">Number</label>
+          <input type="number" id="number" name="number" required />
+        </div>
+        <div class="form-group">
+          <label for="postCode">Post Code</label>
+          <input type="postCode" id="postCode" name="postCode" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div class="form-group" id="checkbox">
+          <label for="emailOpt">Email</label>
+          <input type="checkbox" id="emailOpt" name="emailOpt" required />
+        </div>
+        <div class="form-group" id="checkbox">
+          <label for="smsOpt">SMS</label>
+          <input type="checkbox" id="smsOpt" name="smsOpt" required />
+        </div>
+        <div class="form-group" id="checkbox">
+          <label for="promoOpt">Promo</label>
+          <input type="checkbox" id="promoOpt" name="promoOpt" required />
+        </div>
+        <input class="update-btn" type="submit" value="Update" />
+      </form>
+    </div>
+
+    <div class="container">
+      <h1>Delete user by id</h1>
+      <form action="#" id="deleteCustomerForm">
+        <div class="form-group">
+          <label for="id">ID</label>
+          <input type="id" id="id" name="id" required />
+        </div>
+        <input class="remove-btn" type="submit" value="Delete" />
+      </form>
+    </div>
+    <script src="/pages/customer.html"></script>
+  </body>
+</html>

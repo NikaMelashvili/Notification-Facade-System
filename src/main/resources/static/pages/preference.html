@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/mainStyles.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Update Preferances</h1>
+      <p class="prompt">Enter preferances details below.</p>
+      <form action="#" id="UpdatePreferanceForm">
+        <div class="form-group">
+          <label for="id">ID</label>
+          <input type="id" id="id" name="id" required />
+        </div>
+        <div class="form-group">
+          <label for="emailOpt">Email</label>
+          <input type="checkbox" id="emailOpt" name="emailOpt" required />
+        </div>
+        <div class="form-group">
+          <label for="smsOpt">SMS</label>
+          <input type="checkbox" id="smsOpt" name="smsOpt" required />
+        </div>
+        <div class="form-group">
+          <label for="promoOpt">Promo</label>
+          <input type="checkbox" id="promoOpt" name="promoOpt" required />
+        </div>
+        <input class="update-btn" type="submit" value="Update" />
+      </form>
+    </div>
+    <script src="/scripts/preferences.js"></script>
+  </body>
+</html>
